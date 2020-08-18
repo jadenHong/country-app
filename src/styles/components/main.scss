@@ -1,49 +1,38 @@
-body {
-    // background-image: url("../../images/long\ Background\ image.jpg");
-    // background-size: cover;
-    // height: 5200px;
-    // width: auto;
-    // background-repeat: no-repeat;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+}
+h1{
+    display: block;
+    margin: 0;
+}
 
 
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-    }
-    .logo{
-        display: flex;
-    }
-    h1{
-        display: block;
-        margin: 0;
-    }
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
 
-    .menu-bar ul{
-        display: flex;
-        list-style: none;
-        font-size: 25px;
-    }
-    .menu-bar ul li{
-        margin-right: 20px;
-        cursor: pointer;
-    }
+.title,
+.page-2,
+.page-3,
+.page-4 {
+    height: 150vh;
+}
 
-    .title{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 150px;
-    }
 
-    .page-1,
-    .page-2,
-    .page-3,
-    .page-4 {
-        height: 150vh;
-    }
-    .page-3 {
-        display: flex;
-        justify-content: flex-end;
-    }
-   
+.page-3 {
+    display: flex;
+    justify-content: flex-end;
 }
