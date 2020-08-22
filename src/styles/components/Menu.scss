@@ -1,0 +1,43 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #4c3d5a;
+    color: white;
+}
+
+.user-icon{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.link-logo{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.logo{
+    display: flex;
+    cursor: pointer;
+}
+i{
+    font-size: 40px;
+}
+h1{
+    display: block;
+    margin-left: 20px;
+    font-size: 40px;
+
+}
+.menu-bar ul{
+    display: flex;
+}
+
+.menu-bar ul li{
+    list-style: none;
+    margin-right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
