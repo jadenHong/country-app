@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { fetchCountries } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import SwiperCore, { EffectCoverflow, Navigation, Pagination } from 'swiper';
-// import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([EffectCoverflow, Navigation, Pagination]);
 

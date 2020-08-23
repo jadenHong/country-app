@@ -1,5 +1,5 @@
 
-import { CountryPage, DetailPage, BoardPage, CountryInfo, LogIn, Signup, UserPage } from '.';
+import { CountryPage, Redux, BoardPage, CountryInfo, LogIn, Signup, UserPage } from '.';
 import React, { useRef } from "react";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Main } from "./Main";
@@ -53,7 +53,7 @@ export default () => {
                 <Switch>
 
                     <Route path="/country" component={CountryPage} />
-                    <Route path="/redux" component={DetailPage} />
+                    <Route path="/redux" component={Redux} />
                     <Route path="/board" component={BoardPage} />
                     <Route path="/countryInfo/:countryCode" component={CountryInfo} />
                     <Route

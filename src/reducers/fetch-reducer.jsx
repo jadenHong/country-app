@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+
 import { FETCH_COUNTRIES } from '../actions'
 
 const countryInitialState = {
@@ -7,7 +7,7 @@ const countryInitialState = {
     errorMessage: ''
 }
 
-const countryReducer = (state = countryInitialState, action) => {
+export const countryReducer = (state = countryInitialState, action) => {
     switch (action.type) {
         case `${FETCH_COUNTRIES}_PENDING`: {
             return {
@@ -35,6 +35,3 @@ const countryReducer = (state = countryInitialState, action) => {
     }
 }
 
-export default combineReducers({
-    countryStore: countryReducer,
-})

@@ -1,4 +1,9 @@
-export const FETCH_COUNTRIES = 'FETCH_COUNTRIES'
+
+
+export const FETCH_COUNTRIES = 'FETCH_COUNTRIES';
+export const COUNTER_CHANGE = 'COUNTER_CHANGE';
+export const ADD_TEXT = 'ADD_TEXT';
+
 
 export const fetchCountries = () => ({
     type: FETCH_COUNTRIES,
@@ -12,3 +17,14 @@ export const fetchCountries = () => ({
         }
     })
 });
+
+export const changeCounter = (amount) => ({
+    type: COUNTER_CHANGE,
+    amount,
+});
+
+export const addText = (text) => ({
+    type: ADD_TEXT,
+    text,
+});
+
