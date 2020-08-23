@@ -28,17 +28,20 @@ export const BoardList = () => {
     }
 
     return (
-        <div>
-            <h3>List</h3>
-            {listInfo.map((list, index) => {
-                const { id, title } = list;
-                return (
-                    <div key={index}>
-                        <div type="button" onClick={() => handleListBtn(id)} className="title-button">{title}</div>
-                    </div>
-                )
-            })}
+        <div className="titles">
+            <div className="title-list">
+                <h3>List</h3>
+                {listInfo.map((list, index) => {
+                    const { id, title } = list;
+                    return (
+                        <div key={index}>
+                            <div type="button" onClick={() => handleListBtn(id)} className="title-button" >{title}</div>
+                        </div>
+                    )
+                })}
+            </div>
             <ListDetail detailInfo={clieckedItem} />
+
         </div>
     )
 }

@@ -48,17 +48,23 @@ export const Signup = () => {
     }
 
     return (
-        <div>
-            <label>User Name</label>
-            <input type="text" onChange={handleChange} name="username" ref={usernameRef} />
-            <label>Password</label>
-            <input type="text" onChange={handleChange} name="password" />
-            <label>Confirmation</label>
-            <input type="text" onChange={handleChange} name="confirmation" />
-            <button type="submit" onClick={onSignUp} disabled={!passwordMath}>Sign Up</button>
-            <div>{signupMsg}</div>
+        <div className="signup-page">
+            <div>
+                <label>User Name</label>
+                <input type="text" onChange={handleChange} name="username" ref={usernameRef} />
+                <label>Password</label>
+                <input type="text" onChange={handleChange} name="password" />
+                <label>Confirmation</label>
+                <input type="text" onChange={handleChange} name="confirmation" />
+            </div>
+            <div>
+                <button type="submit" onClick={onSignUp} disabled={!passwordMath} className="signup-button">Sign Up</button>
+            </div>
+            <div className="message">{signupMsg}</div>
             {/* <div>{passwordMath && 'password does not matched'}</div> */}
-            {signed ? <button onClick={() => history.push('/board')}>Go to Board</button> : ''}
+            <div>
+                {signed ? <button onClick={() => history.push('/board')} className="link-board">Go to Board</button> : ''}
+            </div>
         </div>
     )
 }

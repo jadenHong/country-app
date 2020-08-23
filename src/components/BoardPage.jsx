@@ -31,20 +31,23 @@ export const BoardPage = () => {
 
     return (
         <RubberBand>
-            <div>
-                <div className="add-from">
+            <div className="bulletin-page">
+                <div className="add-form">
                     <h2>Bulletin</h2>
                     <label>Title</label>
                     <input type="text" onChange={handleChange} name="title" />
                     <label>Description</label>
                     <input type="text" onChange={handleChange} name="desc" />
+                    <div className="buttons">
+                        <button type="submit" onClick={handleSubmit} className="add-button">ADD</button>
+                        <Link to="/boardList" className="link-list">List</Link>
+                    </div>
                 </div>
                 <div>
-                    <button type="submit" onClick={handleSubmit}>ADD</button>
-                    <Link to="/boardList" className="list">List</Link>
+                    {userExist ? <UserPage /> : <LogIn />}
                 </div>
             </div>
-            {userExist ? <UserPage /> : <LogIn />}
+
         </RubberBand>
     )
 }

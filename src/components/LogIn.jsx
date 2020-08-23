@@ -36,13 +36,17 @@ export const LogIn = () => {
     }
 
     return (
-        <div>
-            <label>User Name</label>
-            <input type="text" onChange={handleChange} name="username" />
-            <label>Password</label>
-            <input type="text" onChange={handleChange} name="password" />
-            <button type="submit" onClick={onLogIn}>Log In</button>
-            <button type="submit" onClick={changePageToSignUp}>Sign Up</button>
+        <div className="login-page">
+            <div>
+                <label>User Name</label>
+                <input type="text" onChange={handleChange} name="username" />
+                <label>Password</label>
+                <input type="text" onChange={handleChange} name="password" />
+            </div>
+            <div>
+                <button type="submit" onClick={onLogIn} className="login-button">Log In</button>
+                <button type="submit" onClick={changePageToSignUp} className="signup-button">Sign Up</button>
+            </div>
             {/* <button type="submit" onClick={cancelMebership}>Drop out</button> */}
             <div>{msg}</div>
         </div>

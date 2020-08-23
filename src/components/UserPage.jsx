@@ -18,11 +18,15 @@ export const UserPage = () => {
 
 
     return (
-        <>
-            <div>Welcome {getUsername}</div>
-            <button onClick={handleLogOut}>Log Out</button>
-            <button type="submit" onClick={handleClick}>Drop out</button>
-            {dropBtnClicked ? <DropPage /> : ''}
-        </>
+        <div className="user-page">
+            <h2>Welcome {getUsername}</h2>
+            <div className="buttons">
+                <button onClick={handleLogOut} className="logout-button">Log Out</button>
+                <button type="submit" onClick={handleClick} className="dropout-button">Drop out</button>
+            </div>
+            <div>
+                {dropBtnClicked ? <DropPage /> : ''}
+            </div>
+        </div>
     )
 }

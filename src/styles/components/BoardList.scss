@@ -1,0 +1,43 @@
+.titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.titles h3{
+    font-size: 40px;
+}
+
+.title-button{
+    width: 200px;
+    background-color: white;
+    border-collapse: collapse;
+    padding: 10px;
+    box-shadow: 
+    2px 0 0 0 #888, 
+    0 2px 0 0 #888, 
+    2px 2px 0 0 #888,
+    2px 0 0 0 #888 inset, 
+    0 2px 0 0 #888 inset;
+    cursor: pointer;
+}
+
+.result{
+    font-size:25px;
+}
+
+.edit-button{
+    text-decoration: none;
+    background-color: gold;
+    padding: 5px;
+    border-radius: 10px;
+    width: 40px;
+    margin-top: 5px;
+}
+
+.edit-link{
+    text-decoration: none;
+    color: black;
+}

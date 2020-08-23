@@ -32,15 +32,17 @@ export const DropPage = () => {
 
 
     return (
-        <>
-            <label>User Name</label>
-            <input type="text" onChange={handleChange} name="username" />
-            <label>Password</label>
-            <input type="text" onChange={handleChange} name="password" />
-            <label>Confirmation</label>
-            <input type="text" onChange={handleChange} name="confirmation" />
-            <button type="submit" onClick={onConfirmation}>Submit</button>
-        </>
+        <div className="drop-page">
+            <div>
+                <label>User Name</label>
+                <input type="text" onChange={handleChange} name="username" />
+                <label>Password</label>
+                <input type="text" onChange={handleChange} name="password" />
+                <label>Confirmation</label>
+                <input type="text" onChange={handleChange} name="confirmation" />
+            </div>
+            <button type="submit" onClick={onConfirmation} className="drop-button">Drop</button>
+        </div>
 
     )
 }

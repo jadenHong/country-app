@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
+import { Notification } from '.';
 
 export const ListEdit = () => {
     const location = useLocation();
     const state = location.state;
     const { id, title, description } = state;
     const [newData, setNewData] = useState();
-
+    const [clicked, setclicked] = useState(0);
 
     const handleUpdate = async () => {
         const URL = 'http://localhost:7778/country/updateData';
@@ -15,7 +16,7 @@ export const ListEdit = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newData),
         });
-        // setclicked(1);
+        setclicked(1);
     }
 
     const handleChange = (e) => {
@@ -23,6 +24,7 @@ export const ListEdit = () => {
         setNewData({
             ...newData,
             [name]: value,
+            id: id,
         })
     }
 
@@ -42,12 +44,12 @@ export const ListEdit = () => {
                 <input type="text" defaultValue={description} onChange={handleChange} name="description" />
 
                 <div className="edit-buttons">
-                    <button type="submit" value="Update" className="button updateBtn" onClick={handleUpdate} />
+                    <button type="submit" value="Update" className="button updateBtn" onClick={handleUpdate}>Update</button>
                     <button onClick={() => handleDelete(id)} className="button deleteBtn">Delete</button>
                     <button className="button listBtn">
                         <Link to="/boardList" className="list-link">List</Link>
                     </button>
-                    {/* {clicked > 0 && <Notification duration={2} message="Processing Successed .." />} */}
+                    {clicked > 0 && <Notification duration={2} message="Processing Successed .." />}
 
                 </div>
 

@@ -1,0 +1,38 @@
+.user-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    h2 {
+        font-size: 30px;
+    }
+
+}
+
+.logout-button {
+    width: 80px;
+    font-size: 15px;
+    margin-top: 10px;
+    background-color: rgb(94, 247, 23);
+    color: white;
+    outline: none;
+    border: 0;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dropout-button {
+    width: 80px;
+    font-size: 15px;
+    margin-top: 10px;
+    background-color: rgb(247, 243, 28);
+    color: white;
+    outline: none;
+    border: 0;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 7px;
+}

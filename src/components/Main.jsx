@@ -1,13 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { Background } from '../components';
 import { Link } from 'react-router-dom';
-
+import { FaArrowCircleUp } from 'react-icons/fa';
 
 export const Main = ({ page2Ref, page3Ref, page4Ref }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [weather, setWeather] = useState('');
     const [errorMsg, setErrorMsg] = useState();
     const API_WEATHER_KEY = '015408c7b2ff4cc5a6b9d6332e145cf6';
+
+    // Scroll functions
+    const [showScroll, setShowScroll] = useState(false);
+
+    const checkScrollTop = () => {
+        if (!showScroll && window.pageYOffset > 120) {
+            setShowScroll(true);
+        } else if (showScroll && window.pageYOffset <= 120) {
+            setShowScroll(false);
+        }
+    }
+    window.addEventListener('scroll', checkScrollTop);
+
+    const scrollTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
 
     // 시간
@@ -67,35 +83,38 @@ export const Main = ({ page2Ref, page3Ref, page4Ref }) => {
                     <h2>Created by Sangmean Hong</h2>
                 </div>
             </div>
-            <div className="page-2">
+            <div className="page-2 page">
                 <div className="world-wrapper" ref={page2Ref}>
-                    <div>
+                    <div className="page2">
                         <h2>Explore the World</h2>
                         <h3>Search countries in the world</h3>
-                        <Link to="/country">Start Now</Link>
+                        <Link to="/country" className="link link2">Start Now</Link>
                     </div>
                 </div>
             </div>
 
-            <div className="page-3">
+            <div className="page-3 page">
                 <div className="details-wrapper" ref={page3Ref}>
-                    <div>
-                        <h2>Explore Country details</h2>
-                        <h3>Search more details of countries</h3>
-                        <Link to="/details">Start Now</Link>
+                    <div className="page3">
+                        <h2>Redux</h2>
+                        <h3>Show the Power of Redux</h3>
+                        <Link to="/details" className="link link3">Start Now</Link>
                     </div>
                 </div>
             </div>
 
-            <div className="page-4">
+            <div className="page-4 page">
                 <div className="board-wrapper" ref={page4Ref}></div>
-                <div className="board">
+                <div className="page4">
                     <h2>Your Board</h2>
                     <h3>Search countries in the world</h3>
-                    <Link to="/board">Start Now</Link>
+                    <Link to="/board" className="link link4">Start Now</Link>
                 </div>
             </div>
-
+            {/* react-icons API 사용함 */}
+            <FaArrowCircleUp className="scrollTop"
+                onClick={scrollTop}
+                style={{ display: showScroll ? 'flex' : 'none' }} />
         </div>
     );
-}   
+}

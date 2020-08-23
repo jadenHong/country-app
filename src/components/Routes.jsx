@@ -27,7 +27,7 @@ export default () => {
                 page2Ref && scroll(page2Ref);
                 break;
             }
-            case "details": {
+            case "redux": {
                 page3Ref && scroll(page3Ref);
                 break;
             }
@@ -53,7 +53,7 @@ export default () => {
                 <Switch>
 
                     <Route path="/country" component={CountryPage} />
-                    <Route path="/details" component={DetailPage} />
+                    <Route path="/redux" component={DetailPage} />
                     <Route path="/board" component={BoardPage} />
                     <Route path="/countryInfo/:countryCode" component={CountryInfo} />
                     <Route
